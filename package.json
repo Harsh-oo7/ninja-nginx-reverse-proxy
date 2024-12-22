@@ -1,0 +1,22 @@
+{
+  "name": "ninja-nginx-reverse-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index",
+    "build": "tsc -p .",
+    "dev": "tsc-watch --onSuccess \"npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-Harsh-oo7:Harsh-oo7/ninja-nginx-reverse-proxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
