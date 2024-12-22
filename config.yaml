@@ -3,11 +3,11 @@ server:
   workers: 4
   
   upstreams:
-    - id: node1
-      url: http://localhost:8001
+    - id: jsonplaceholder
+      url: jsonplaceholder.typicode.com
 
-    - id: node2
-      url: http://localhost:8002
+    - id: dummyjson
+      url: dummyjson.com
     
 
   headers:
@@ -18,11 +18,12 @@ server:
       value: 'Bearer $token'
 
   rules:
+    - path: /test
+      upstreams: 
+        - dummyjson
+
     - path: /
       upstreams: 
-        - node1
-        - node2
+        - jsonplaceholder
 
-    - path: /admin
-      upstreams: 
-        - node2
+    
